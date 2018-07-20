@@ -88,3 +88,6 @@
 *.exe binary
 *.out binary
 *.app binary
+
+*.txt diff
+*.cpp diff
