@@ -11,7 +11,7 @@ int main()
 {
 	cl::Platform platform;
 
-	std::cout << "Hello World!";
+	std::cout << "Hello World! UTF-8";
     return 0;
 }
 
