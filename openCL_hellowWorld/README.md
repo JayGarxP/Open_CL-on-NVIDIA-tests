@@ -19,3 +19,9 @@ Type in
 
 (make sure you're targeting x64 platform in configuration manager)
 
+
+
+Github Desktop (new 2018 version) cannot diff if file encodings are different! You will see 'binary file changed' instead of a useful diff.
+Make sure to File->Save As    
+then click the tiny hidden arrow next to save to access the 'Encoding' menu,
+save and replace your file as UTF-8 to get diffs working again.
