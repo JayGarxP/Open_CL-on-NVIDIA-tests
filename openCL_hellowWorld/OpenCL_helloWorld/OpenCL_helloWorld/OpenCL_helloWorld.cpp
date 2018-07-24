@@ -1,7 +1,7 @@
 ﻿// OpenCL_helloWorld.cpp : Defines the entry point for the console application.
 //// my first program in C++ OPENCL
-// Youtube Wesley Shillingford Youtube [OpenCL 1.2 C++ Tutorials 3/9]
-//#define CL_USE_DEPRECATED_OPENCL_2_0_APIS
+// Youtube Wesley Shillingford Youtube [OpenCL 1.2 C++ Tutorials 4/9]
+
 #include "stdafx.h"
 #include <iostream>
 
@@ -25,8 +25,7 @@ int main()
 	_ASSERT(devices.size() > 0);
 
 	auto device = devices.front();
-	auto intel_gpu_device = devices.back(); //Intel is CPU and GPU   NVIDIA GPU NOT BEING HIT
-	//TODO why is this? is NVIDIA inaccessible in debug? is code not even compiling for it?
+	auto intel_gpu_device = devices.back(); //Intel is CPU and GPU, 2 seperate devices.
 
 	auto REAL_GPU_device = gpu_devices.front();
 
@@ -42,7 +41,7 @@ int main()
 
 	std::cout << "Hello World! End of Part 4 " + vendor;
 	std::cout << "second vendor poll: " + intel_gpu_vendor;
-	std::cout << "inVIDYA vendor poll: " + nvidia_vendor;
+	std::cout << "inVIDYA vendor poll: " + nvidia_vendor; //use Nsight legacy debug (have to detach THIS local c++ debugger, attach cuda/openCL debugger, not working yet)
 	while (true) {}
     return 0;
 }
